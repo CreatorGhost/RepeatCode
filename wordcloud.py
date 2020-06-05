@@ -22,10 +22,10 @@ data["Age"].value_counts()[:20].plot(kind="pie")
 Fucntion TO Generate Word Cloud
 '''
 def plotCloud(word):
-  stopwords = STOPWORDS
+  stwords = STOPWORDS
   word=' '.join(word)  ## Used When List of words are passed . Remove if ugoing string
-  wordcloud = WordCloud(stopwords=stopwords, background_color="black", max_words=10).generate(word)
-  rcParams['figure.figsize'] = 10, 20
+  wordcloud = WordCloud(stopwords=stwords,width = 3000,height = 2000, background_color="black", max_words=10).generate(word)
+  rcParams['figure.figsize'] = 20, 50
   plt.imshow(wordcloud)
   plt.axis("off")
   plt.show()
