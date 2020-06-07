@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 import nltk
+from matplotlib import rcParams
 import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.cm as cm
