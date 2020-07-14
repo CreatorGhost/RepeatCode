@@ -16,8 +16,17 @@ import collections
 rcParams["figure.figsize"] = 5,8
 data["Age"].value_counts()[:20].plot(kind="pie")
 
+'''
+n grams
 
 
+'''
+from nltk.tokenize import word_tokenize
+from nltk.util import ngrams
+
+def get_ngrams(text, n ):
+    n_grams = ngrams(word_tokenize(text), n)
+    return [ ' '.join(grams) for grams in n_grams]
 
 '''
 Fucntion TO Generate Word Cloud
